@@ -11,7 +11,7 @@ public class Parser_1 {
             currentChar = expression.charAt(index);
             // Если ситуация (-2+1), например, у первого числа -, то не заменяем знак на ~,
             // он у числа а не у выражения
-            if (currentChar == '-' && prevChar != '(') {
+            if (currentChar == '~' && prevChar != '(') {
                 expression = expression.substring(0, index) +
                         "~" +
                         expression.substring(index + 1);
